@@ -16,6 +16,11 @@
 ```
 3. fibonacci (7)
 4. LCS (15)
-5. LIS (10)
-6. kadane's algo (6)
-7. MCM (7)
+```cpp
+    if(n==0 || m==0)return 0;
+    if(s1[n-1]==s2[m-1])return LCS(s1, s2, n-1, m-1)+1; 
+    else return max(LCS(s1,s2, n, m-1), LCS(s1, s2, n-1, m));
+ ```
+7. LIS (10)
+8. kadane's algo (6)
+9. MCM (7)
