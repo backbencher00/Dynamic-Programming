@@ -1,8 +1,14 @@
 # DP
 1. 0-1 knapsack (6)
-2. unbounded knapsack(5)
-3. fibonacci (7)
-4. LCS (15)
-5. LIS (10)
-6. kadane's algo (6)
-7. MCM (7)
+cpp```
+        if(n==0 || W==0)return 0;
+        if(W<=wt[n-1]){
+            return max(val[n-1] + knapsack(W-wt[n-1], wt, val, n-1), knapsack(W, wt, val, n-1) );
+        }else return knapsack(W, wt, val, n-1);
+```
+3. unbounded knapsack(5)
+4. fibonacci (7)
+5. LCS (15)
+6. LIS (10)
+7. kadane's algo (6)
+8. MCM (7)
