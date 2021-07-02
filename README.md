@@ -24,3 +24,13 @@
 7. LIS (10)
 8. kadane's algo (6)
 9. MCM (7)
+```cpp
+if(i==j)return 0;
+	if(dp[i][j]!=-1)return dp[i][j];
+	dp[i][j]=INT_MAX;
+	for(int k=i;k<j;k++){
+		int temp=MCS(arr, i, k)+MCS(arr, k+1, j) +arr[i-1]*arr[k]*arr[j];
+		dp[i][j]=min(dp[i][j], temp);
+	}
+	return dp[i][j];
+ ```
